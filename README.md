@@ -22,9 +22,7 @@ uint32_t freertos_get_systic_clock_freq();
 
 
 
-实现了外部符号后，还要注意链接顺序。例如在 `atk-stm32f103` 库中实现了这些外部符号，则链接时，`libfreertos ` 需要在
-
- `atk-stm32f103` 之前链接
+实现了外部符号后，还要注意链接顺序。例如在 `atk-stm32f103` 库中实现了这些外部符号，则链接时，`libfreertos ` 需要在 `atk-stm32f103` 之前链接
 
 ```cmake
 target_import_libfreertos(${ProjectName} PUBLIC)
