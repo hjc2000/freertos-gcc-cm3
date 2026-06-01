@@ -285,8 +285,8 @@ extern "C"
 	if ((x) == 0)       \
 	vAssertCalled(__FILE__, __LINE__)
 
-	void on_task_switched_in(void *task_handle);
-	void on_task_switched_out(void *task_handle);
+	void on_task_switched_in(void *context);
+	void on_task_switched_out(void *context);
 
 #define configUSE_APPLICATION_TASK_TAG 1
 #define traceTASK_SWITCHED_IN() on_task_switched_in(pxCurrentTCB->pxTaskTag)
